@@ -1,5 +1,5 @@
 # Air-Pollutant-Plotter
-This program will plot user selected air pollutant data into line graphs. It can have up to three plots on one graph (due to visual preferences). It will also print minimal statistical data. 
+This program will plot user selected air pollutant data into line graphs. It can have up to three plots on one graph (due to visual preferences). It will also print minimal statistical data. Data collected from http://www.airqualityontario.com/history/.
 
 Years Available: 2011-2020
 
