@@ -14,7 +14,7 @@ HOURS = ['H01', 'H02', 'H03', 'H04', 'H05', 'H06', 'H07', 'H08', 'H09', 'H10',
          'H11', 'H12', 'H13', 'H14', 'H15', 'H16', 'H17', 'H18', 'H19', 'H20',
          'H21', 'H22', 'H23', 'H24']
 INCREMENTS = [1, 3, 5, 8, 10, 15]
-GASES = ['Ozone', 'NitricOxide', 'NitrogenDioxide', 'NitrogenOxides', 'PM2.5', 'SulfurDioxide']
+GASES = ['Ozone', 'NitricOxide', 'NitrogenDioxide', 'NitrogenOxides', 'SulfurDioxide']
 
 plot = plotter.Plotter()
 plt.figure(figsize=(13, 10))
@@ -72,6 +72,9 @@ while True:
                 if values['year3'] != '':
                     plot.hour_plotter(values['hour3'], 'Year', values['year3'], '01',
                                       values['increment3'], values['gas3'], 'Green')
+                plt.xlabel('Days')
+                plt.ylabel('Concentration (PPB)')
+                plt.title('Concentration as Year Progresses')
                 plt.show()
             elif values['period'] == 'Month':
                 if values['year'] != '':
@@ -83,6 +86,9 @@ while True:
                 if values['year3'] != '':
                     plot.hour_plotter(values['hour3'], 'Month', values['year3'], values['month'],
                                       values['increment3'], values['gas3'], 'Green')
+                plt.xlabel('Days')
+                plt.ylabel('Concentration (PPB)')
+                plt.title('Concentration as Month Progresses')
                 plt.show()
             elif values['period'] == 'Day':
                 if values['year'] != '':
@@ -91,6 +97,9 @@ while True:
                     plot.day_plotter(values['year2'], values['month2'], values['day2'], values['gas2'], 'Red')
                 if values['year3'] != '':
                     plot.day_plotter(values['year3'], values['month3'], values['day3'], values['gas3'], 'Green')
+                plt.xlabel('Hours')
+                plt.ylabel('Concentration (PPB)')
+                plt.title('Concentration as Day Progresses')
                 plt.show()
             else:
                 print("You didn't enter a period")
